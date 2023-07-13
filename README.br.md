@@ -11,7 +11,7 @@
 Selecione ou bana um campeão aleatório na seleção de campeões :) <br>
 Útil para modos que não possuem esse botão como flex ranqueada!
 
-<img src="https://i.imgur.com/EadRyXr.mp4" width="700" alt="Plugin preview">
+<img src="https://github.com/controlado/random-champion/assets/71716568/647c40fe-1bdf-4889-88d4-fa68cd29a24c" width="700" alt="Plugin preview">
 
 </div>
 <br>
