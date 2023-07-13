@@ -11,7 +11,7 @@
 Pick and ban a random champion in the champion select :) <br>
 Useful for modes that don't have that button like ranked flex!
 
-<img src="https://github.com/controlado/random-champion/assets/71716568/f99b32b4-22cf-474b-9d23-4ca901b8b2a5" width="700" alt="Plugin preview">
+<img src="https://github.com/controlado/random-champion/assets/71716568/6a1c4cd4-ba8a-4a16-b749-89f1aa674ee2" width="700" alt="Plugin preview">
 
 </div>
 <br>
