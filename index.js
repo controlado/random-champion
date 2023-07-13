@@ -1,4 +1,4 @@
-import { addRoutines, request } from "../controladoUtils";
+import { layerManager, addRoutines, request } from "../controladoUtils";
 import "./assets/styles.css";
 
 /**
@@ -35,7 +35,39 @@ function newButton() {
             }
         }
     };
+    setTooltip(randomChampionIcon, "top", "Select random champion in selected role.");
     return randomChampionIcon;
+}
+
+function setTooltip(element, position, text) {
+    const tooltip = document.createElement("div");
+    tooltip.setAttribute("id", "lol-uikit-tooltip-root");
+    tooltip.classList.add("tooltip", "tooltip-random-champion");
+
+    const tooltipContent = document.createElement("lol-uikit-tooltip");
+    tooltipContent.setAttribute("data-tooltip-position", position);
+    tooltipContent.setAttribute("type", "system");
+
+    const tooltipBlock = document.createElement("lol-uikit-content-block");
+    tooltipBlock.setAttribute("type", "tooltip-system");
+
+    const tooltipText = document.createElement("p");
+    tooltipText.innerText = text;
+
+    tooltipBlock.appendChild(tooltipText);
+    tooltipContent.appendChild(tooltipBlock);
+    tooltip.appendChild(tooltipContent);
+
+    element.onmouseenter = () => {
+        const rect = element.getBoundingClientRect();
+        tooltip.style.top = `${rect.top - 48}px`;
+        tooltip.style.left = `${rect.left - 116}px`;
+        layerManager.appendChild(tooltip);
+    };
+
+    element.onmouseleave = () => {
+        layerManager.removeChild(tooltip);
+    };
 }
 
 function getAvailableChampions() {
