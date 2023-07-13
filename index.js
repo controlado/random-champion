@@ -39,20 +39,13 @@ function newButton() {
 }
 
 function getAvailableChampions() {
-    const championsGrid = document.querySelector(".champion-container > div > div");
+    const championsData = document.querySelectorAll(".champion-container > div > div > div > div");
     const championIds = [];
 
-    for (const champion of championsGrid.children) {
-        if (champion.style.display === "none") {
-            continue;
-        }
-
-        const championData = champion.querySelector("div");
+    for (const championData of championsData) {
+        if (championData.parentElement.style.display) { continue; }
         const championId = championData.getAttribute("data-id");
-
-        if (championId !== "-2") {
-            championIds.push(championId);
-        }
+        if (championId !== "-2") { championIds.push(championId); }
     }
 
     return championIds;
