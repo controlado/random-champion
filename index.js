@@ -20,18 +20,13 @@ function newButton() {
     const randomChampionIcon = document.createElement("div");
     randomChampionIcon.classList.add("filter", "reroll-champion-button");
     randomChampionIcon.onclick = async () => {
-        const [ownedChampionsRes, championSelectRes] = await Promise.all([
-            request("GET", "/lol-champ-select/v1/pickable-champion-ids"),
-            request("GET", "/lol-champ-select/v1/session")
-        ]);
-        const [ownedChampions, championSelect] = await Promise.all([
-            ownedChampionsRes.json(),
-            championSelectRes.json()
-        ]);
+        const pickableChampions = getAvailableChampions();
+        const championSelectRes = await request("GET", "/lol-champ-select/v1/session");
+        const championSelect = await championSelectRes.json();
         for (const action of championSelect.actions) {
             for (const subAction of action) {
                 if (subAction.completed === false && subAction.actorCellId === championSelect.localPlayerCellId) {
-                    const body = { championId: ownedChampions[Math.floor(Math.random() * ownedChampions.length)] };
+                    const body = { championId: pickableChampions[Math.floor(Math.random() * pickableChampions.length)] };
                     const selectRes = await request("PATCH", `/lol-champ-select/v1/session/actions/${subAction.id}`, { body });
                     if (selectRes.ok) {
                         return;
@@ -41,6 +36,26 @@ function newButton() {
         }
     };
     return randomChampionIcon;
+}
+
+function getAvailableChampions() {
+    const championsGrid = document.querySelector(".champion-container > div > div");
+    const championIds = [];
+
+    for (const champion of championsGrid.children) {
+        if (champion.style.display === "none") {
+            continue;
+        }
+
+        const championData = champion.querySelector("div");
+        const championId = championData.getAttribute("data-id");
+
+        if (championId !== "-2") {
+            championIds.push(championId);
+        }
+    }
+
+    return championIds;
 }
 
 window.addEventListener("load", function () {
