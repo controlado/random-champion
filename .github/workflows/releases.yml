@@ -3,9 +3,9 @@ name: Criar Release
 on:
   repository_dispatch:
   push:
-    paths:
-      - "!**.md"
-      - "!**.yml"
+    paths-ignore:
+      - "**.md"
+      - "**.yml"
 
 env:
   PLUGIN_NAME: "random-champion"
