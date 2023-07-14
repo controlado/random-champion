@@ -75,8 +75,7 @@ function getAvailableChampions() {
     const championIds = [];
 
     for (const championData of championsData) {
-        if (championData.parentNode.style.display) { continue; }
-        if (championData.hasAttribute("disabled")) { continue; }
+        if (championData.parentNode.style.display || championData.hasAttribute("disabled")) { continue; }
         const championId = championData.getAttribute("data-id");
         if (championId !== "-2") { championIds.push(championId); }
     }
