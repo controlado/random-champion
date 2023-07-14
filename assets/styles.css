@@ -1,1 +1,14 @@
-.reroll-champion-button{background-color:#69655e;max-height:-webkit-fill-available;-webkit-mask:url(../assets/button.webp) no-repeat center;-webkit-mask-size:28px}.reroll-champion-button:hover{background-color:#f0e6d2}.filter-icons .filter:first-child{margin-block:-4px}
+.reroll-champion-button {
+    background-color: #69655e;
+    max-height: -webkit-fill-available;
+    -webkit-mask: url(../assets/button.webp) no-repeat center;
+    -webkit-mask-size: 28px
+}
+
+.reroll-champion-button:hover {
+    background-color: #f0e6d2
+}
+
+.filter-icons .filter:first-child {
+    margin-block: -4px
+}
