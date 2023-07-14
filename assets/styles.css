@@ -9,6 +9,15 @@
     background-color: #f0e6d2
 }
 
+.filter-icons {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    margin-right: 8px;
+    margin-top: 8px;
+    width: auto;
+}
+
 .filter-icons .filter:first-child {
     margin-block: -4px
 }
