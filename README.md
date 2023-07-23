@@ -19,7 +19,7 @@ Useful for modes that don't have that button like ranked flex!
 ## Dependencies
 
 [Pengu Loader 1.0.4](https://github.com/PenguLoader/PenguLoader) (or any higher version) <br>
-[_controladoUtils.js](https://github.com/controlado/pengu-plugins/blob/master/_controladoUtils.js) (must be in the plugins folder)
+[controladoUtils.js](https://github.com/controlado/pengu-plugins) (automatically included)
 
 ## Installation
 
@@ -32,10 +32,8 @@ The structure should look something like this:
 📂 Pengu Loader
 └── 📂 plugins
     ├── 📂 @default
-    ├── 📄 _controladoUtils.js
     └── 📂 random-champion
-        ├── 📄 index.js
-        └── 📂 assets
-            ├── ✏️ syles.css
-            └── 📷 button.png
+        ├── 📃 README.md
+        ├── 📃 README.br.md
+        └── 📀 index.js
 ```
