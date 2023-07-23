@@ -8,10 +8,10 @@ import "./assets/styles.css";
  * @description Pick and ban a random champion in champion select! 🐧
  */
 
-async function setupElement(selector) {
+async function setupElement(selector, attribute) {
     const iconsContainer = document.querySelector(selector);
-    if (!iconsContainer || iconsContainer.hasAttribute("random-champion-setup")) { return; }
-    iconsContainer.setAttribute("random-champion-setup", "true");
+    if (!iconsContainer || iconsContainer.hasAttribute(attribute)) { return; }
+    iconsContainer.setAttribute(attribute, "true");
     iconsContainer.insertBefore(newButton(), iconsContainer.firstChild);
 }
 
@@ -83,7 +83,7 @@ function getAvailableChampions() {
 }
 
 window.addEventListener("load", () => {
-    console.debug("random-champion: Report bugs to Balaclava#1912");
     addCssLink("https://cdn.skypack.dev/random-champion@latest/dist/assets/index.css");
-    addRoutines(() => setupElement(".filter-icons"));
+    addRoutines(() => setupElement(".filter-icons", "random-champion-setup"));
+    console.debug("random-champion: Report bugs to Balaclava#1912");
 });
