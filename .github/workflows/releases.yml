@@ -18,9 +18,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      
+      - name: Criando uma pasta
+        run: mkdir ${{ env.plugin_name }}
 
-      - name: Zipando o plugin
-        run: zip -r ${{ env.plugin_name }}.zip index.js README.md README.br.md
+      - name: Movendo os arquivos para a pasta
+        run: mv index.js README.md README.br.md ${{ env.plugin_name }}
+
+      - name: Zipando a pasta
+        run: zip -r ${{ env.plugin_name }}.zip ${{ env.plugin_name }}
 
       - name: Criando a release
         uses: softprops/action-gh-release@v1
