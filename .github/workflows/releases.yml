@@ -1,4 +1,4 @@
-name: Criar Release
+name: Criar nova release
 
 env:
   plugin_name: random-champion
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       - name: Criando uma pasta
         run: mkdir ${{ env.plugin_name }}
 
@@ -36,3 +36,4 @@ jobs:
           files: ${{ env.plugin_name }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
