@@ -1,4 +1,4 @@
-import { layerManager, request, addRoutines, addCssLink } from "https://cdn.skypack.dev/balaclava-utils@latest";
+import { layerManager, request, addRoutines } from "https://cdn.skypack.dev/balaclava-utils@latest";
 import "./assets/styles.css";
 
 /**
@@ -83,7 +83,6 @@ function getAvailableChampions() {
 }
 
 window.addEventListener("load", () => {
-    addCssLink("https://cdn.skypack.dev/random-champion@latest/dist/assets/index.css");
     addRoutines(() => setupElement(".filter-icons", "random-champion-setup"));
     console.debug("random-champion: Report bugs to Balaclava#1912");
 });
