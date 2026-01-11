@@ -1,4 +1,4 @@
-import { layerManager, request, addRoutines } from "https://cdn.skypack.dev/balaclava-utils@latest";
+import { layerManager, request, addRoutines } from "https://cdn.jsdelivr.net/npm/balaclava-utils@latest";
 import { version } from "../package.json";
 import "./assets/styles.css";
 

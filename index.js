@@ -5,4 +5,4 @@
  * @description Pick and ban a random champion in champion select! 🐧
  */
 
-import "https://cdn.skypack.dev/random-champion@latest?min";
+import "https://cdn.jsdelivr.net/npm/random-champion@latest?min";
