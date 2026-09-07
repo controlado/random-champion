@@ -3,7 +3,8 @@
 # `🐧` Random Champion <br>
 
 [![wakatime](https://wakatime.com/badge/github/controlado/random-champion.svg)](https://wakatime.com/@programador/projects/ltbeutnonj)
-[![discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=flat&logo=discord&logoColor=white&color=blue)](https://discordapp.com/users/854886148455399436) <br>
+[![discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=flat&logo=discord&logoColor=white&color=blue)](https://discordapp.com/users/854886148455399436)
+[![Requisições mensais no jsDelivr](https://img.shields.io/jsdelivr/npm/hm/random-champion?style=flat&color=blue&label=jsDelivr)](https://www.jsdelivr.com/package/npm/random-champion) <br>
 ![languages](https://img.shields.io/badge/Documentation-gray)
 [![english](https://img.shields.io/badge/-English-blue)](README.md)
 [![portuguese](https://img.shields.io/badge/-Português%20Brasileiro-blue)](README.br.md)
@@ -37,3 +38,17 @@ A estrutura deve ser algo parecido com isso:
         ├── 📃 README.br.md
         └── 📀 index.js
 ```
+
+## Histórico de estrelas
+
+<div align="center">
+
+<a href="https://www.star-history.com/?repos=controlado/random-champion&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=controlado/random-champion&amp;type=date&amp;theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=controlado/random-champion&amp;type=date">
+    <img src="https://api.star-history.com/chart?repos=controlado/random-champion&amp;type=date" width="700" alt="Histórico de estrelas de random-champion">
+  </picture>
+</a>
+
+</div>
